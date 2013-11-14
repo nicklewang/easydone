@@ -24,8 +24,6 @@ class ControllerAccountRegister extends Controller {
 			
 			// Default Shipping Address
 			if ($this->config->get('config_tax_customer') == 'shipping') {
-				$this->session->data['shipping_country_id'] = $this->request->post['country_id'];
-				$this->session->data['shipping_zone_id'] = $this->request->post['zone_id'];
 				$this->session->data['shipping_postcode'] = $this->request->post['postcode'];				
 			}
 			
@@ -354,10 +352,6 @@ class ControllerAccountRegister extends Controller {
       		$this->error['firstname'] = $this->language->get('error_firstname');
     	}
 
-    	if ((utf8_strlen($this->request->post['lastname']) < 1) || (utf8_strlen($this->request->post['lastname']) > 32)) {
-      		$this->error['lastname'] = $this->language->get('error_lastname');
-    	}
-
     	if ((utf8_strlen($this->request->post['email']) > 96) || !preg_match('/^[^\@]+@.*\.[a-z]{2,6}$/i', $this->request->post['email'])) {
       		$this->error['email'] = $this->language->get('error_email');
     	}
@@ -397,14 +391,9 @@ class ControllerAccountRegister extends Controller {
       		$this->error['address_1'] = $this->language->get('error_address_1');
     	}
 
-    	if ((utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 128)) {
-      		$this->error['city'] = $this->language->get('error_city');
-    	}
-
 		$this->load->model('localisation/country');
 		
-		$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
-		
+/*		
 		if ($country_info) {
 			if ($country_info['postcode_required'] && (utf8_strlen($this->request->post['postcode']) < 2) || (utf8_strlen($this->request->post['postcode']) > 10)) {
 				$this->error['postcode'] = $this->language->get('error_postcode');
@@ -417,15 +406,7 @@ class ControllerAccountRegister extends Controller {
 				$this->error['tax_id'] = $this->language->get('error_vat');
 			}
 		}
-
-    	if ($this->request->post['country_id'] == '') {
-      		$this->error['country'] = $this->language->get('error_country');
-    	}
-		
-    	if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '') {
-      		$this->error['zone'] = $this->language->get('error_zone');
-    	}
-
+*/
     	if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
       		$this->error['password'] = $this->language->get('error_password');
     	}
