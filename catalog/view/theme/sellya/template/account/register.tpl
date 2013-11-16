@@ -22,7 +22,7 @@
             <span class="error"><?php echo $error_firstname; ?></span>
             <?php } ?></td>
         </tr>
-        <tr>
+        <tr style="display:none">
           <td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
           <td><input type="text" name="lastname" value="<?php echo $lastname; ?>" />
             <?php if ($error_lastname) { ?>
@@ -43,7 +43,7 @@
             <span class="error"><?php echo $error_telephone; ?></span>
             <?php } ?></td>
         </tr>
-        <tr>
+        <tr style="display:none">
           <td><?php echo $entry_fax; ?></td>
           <td><input type="text" name="fax" value="<?php echo $fax; ?>" /></td>
         </tr>
@@ -52,7 +52,7 @@
     <h2><?php echo $text_your_address; ?></h2>
     <div class="content">
       <table class="form">
-        <tr>
+        <tr style="display:none">
           <td><?php echo $entry_company; ?></td>
           <td><input type="text" name="company" value="<?php echo $company; ?>" /></td>
         </tr>        
@@ -70,13 +70,6 @@
             <?php } ?>
             <?php } ?></td>
         </tr>      
-        <tr id="company-id-display">
-          <td><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?></td>
-          <td><input type="text" name="company_id" value="<?php echo $company_id; ?>" />
-            <?php if ($error_company_id) { ?>
-            <span class="error"><?php echo $error_company_id; ?></span>
-            <?php } ?></td>
-        </tr>
         <tr id="tax-id-display">
           <td><span id="tax-id-required" class="required">*</span> <?php echo $entry_tax_id; ?></td>
           <td><input type="text" name="tax_id" value="<?php echo $tax_id; ?>" />
@@ -91,11 +84,11 @@
             <span class="error"><?php echo $error_address_1; ?></span>
             <?php } ?></td>
         </tr>
-        <tr>
+        <tr style="display:none">
           <td><?php echo $entry_address_2; ?></td>
           <td><input type="text" name="address_2" value="<?php echo $address_2; ?>" /></td>
         </tr>
-        <tr>
+        <tr style="display:none">
           <td><span class="required">*</span> <?php echo $entry_city; ?></td>
           <td><input type="text" name="city" value="<?php echo $city; ?>" />
             <?php if ($error_city) { ?>
@@ -109,7 +102,7 @@
             <span class="error"><?php echo $error_postcode; ?></span>
             <?php } ?></td>
         </tr>
-        <tr>
+        <tr style="display:none">
           <td><span class="required">*</span> <?php echo $entry_country; ?></td>
           <td><select name="country_id">
               <option value=""><?php echo $text_select; ?></option>

@@ -4,7 +4,7 @@ $_['text_sale']                  = '特价';
 $_['text_more']                  = 'More';
 $_['text_shop_now']              = 'Shop Now!';
 $_['text_login_s']               = '登录';
-$_['text_logged_s']              = '<a href="%s">Welcome, %s</a> <a href="%s">Logout</a>';
+$_['text_logged_s']              = '<a href="%s">欢迎您, %s</a> <a href="%s">退出</a>';
 $_['text_register']              = '注册';
 $_['text_order']                 = 'Order History';
 $_['text_compare']               = 'Product Compare (%s)'; 
