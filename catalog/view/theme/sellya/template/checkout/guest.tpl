@@ -90,11 +90,11 @@
 <?php if ($shipping_required) { ?>
 <div style="clear: both; padding-top: 15px; border-top: 1px solid #DDDDDD;">
   <?php if ($shipping_address) { ?>
-  <input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" />
+  <input type="checkbox" name="shipping_address" value="1" id="shipping" checked="checked" style="display: none"/>
   <?php } else { ?>
   <input type="checkbox" name="shipping_address" value="1" id="shipping" />
   <?php } ?>
-  <label for="shipping"><?php echo $entry_shipping; ?></label>
+  <label for="shipping" style="display: none"><?php echo $entry_shipping; ?></label>
   <br />
   <br />
   <br />

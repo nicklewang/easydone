@@ -23,7 +23,7 @@
     </div>
     <?php } ?>
     <?php if ($shipping_required) { ?>
-    <div id="shipping-address">
+    <div id="shipping-address" style="display: none">
       <div class="checkout-heading"><?php echo $text_checkout_shipping_address; ?></div>
       <div class="checkout-content"></div>
     </div>
@@ -278,7 +278,9 @@ $('#button-register').live('click', function() {
 							
 							$('#payment-address .checkout-content').slideUp('slow');
 							
-							$('#shipping-address .checkout-content').slideDown('slow');
+							$('#shipping-address #button-address').click();
+				$('#button-shipping-address').click();
+
 							
 							$('#checkout .checkout-heading a').remove();
 							$('#payment-address .checkout-heading a').remove();
@@ -412,7 +414,9 @@ $('#button-payment-address').live('click', function() {
 					
 						$('#payment-address .checkout-content').slideUp('slow');
 						
-						$('#shipping-address .checkout-content').slideDown('slow');
+						$('#shipping-address #button-address').click();
+				$('#button-shipping-address').click();
+
 						
 						$('#payment-address .checkout-heading a').remove();
 						$('#shipping-address .checkout-heading a').remove();
@@ -695,7 +699,9 @@ $('#button-guest').live('click', function() {
 							
 							$('#payment-address .checkout-content').slideUp('slow');
 							
-							$('#shipping-address .checkout-content').slideDown('slow');
+							$('#shipping-address #button-address').click();
+				      $('#button-shipping-address').click();
+
 							
 							$('#payment-address .checkout-heading a').remove();
 							$('#shipping-address .checkout-heading a').remove();
